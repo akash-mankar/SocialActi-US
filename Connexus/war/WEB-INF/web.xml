@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+    <servlet>
+		<servlet-name>hfs</servlet-name>
+		<servlet-class>com.adnan.HandleFormServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>hfs</servlet-name>
+		<url-pattern>/handleFormServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>css</servlet-name>
+		<servlet-class>com.adnan.CreateStreamServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>css</servlet-name>
+		<url-pattern>/createStreamServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Adnan</servlet-name>
+		<servlet-class>com.adnan.AdnanServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Adnan</servlet-name>
+		<url-pattern>/adnan</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowStreamServlet</servlet-name>
+		<jsp-file>/ShowStream.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowStreamServlet</servlet-name>
+		<url-pattern>/showStream</url-pattern>
+	</servlet-mapping>
+		
+	<servlet>
+		<servlet-name>imageuploadtest</servlet-name>
+		<servlet-class>com.adnan.ImageUploadTestServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>imageuploadtest</servlet-name>
+		<url-pattern>/imageuploadtest</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>blobuploadtest</servlet-name>
+		<servlet-class>com.adnan.BlobUploadTest</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>blobuploadtest</servlet-name>
+		<url-pattern>/blobuploadtest</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+  	<servlet-name>AnalyzeStreamTrendsServlet</servlet-name>
+  		<servlet-class> 
+   		 com.adnan.AnalyzeStreamTrendsServlet
+  		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+  		<servlet-name>AnalyzeStreamTrendsServlet</servlet-name>
+  		<url-pattern>/analyzestreamtrendsservlet</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+  	<servlet-name>SendReportServlet</servlet-name>
+  		<servlet-class> 
+   		 com.adnan.SendReportServlet
+  		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+  		<servlet-name>SendReportServlet</servlet-name>
+  		<url-pattern>/sendreportservlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Serve</servlet-name>
+		<servlet-class>com.adnan.Serve</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Serve</servlet-name>
+		<url-pattern>/serve</url-pattern>
+	</servlet-mapping>
+	
+<servlet>
+	<servlet-name>allstreamsservlet</servlet-name>
+	<servlet-class>com.adnan.AllStreamsServletAPI</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>allstreamsservlet</servlet-name>
+	<url-pattern>AllStreamsServletAPI</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>singlestreamservletAPI</servlet-name>
+	<servlet-class>com.adnan.SingleStreamServletAPI</servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+	<servlet-name>singlestreamservletAPI</servlet-name>
+	<url-pattern>SingleStreamServletAPI</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>uploadservletAPI</servlet-name>
+	<servlet-class>com.adnan.UploadServletAPI</servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+	<servlet-name>uploadservletAPI</servlet-name>
+	<url-pattern>UploadServletAPI</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>AutoCompleteServlet</servlet-name>
+	<servlet-class>com.adnan.AutoCompleteServlet</servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+	<servlet-name>AutoCompleteServlet</servlet-name>
+	<url-pattern>autocompleteservlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+	<servlet-name>subscriberservletAPI</servlet-name>
+	<servlet-class>com.adnan.SubscriberServletAPI</servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+	<servlet-name>subscriberservletAPI</servlet-name>
+	<url-pattern>SubscriberServletAPI</url-pattern>
+  </servlet-mapping>
+	
+   <servlet>
+	<servlet-name>nearbyservletAPI</servlet-name>
+	<servlet-class>com.adnan.NearbyServletAPI</servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+	<servlet-name>nearbyservletAPI</servlet-name>
+	<url-pattern>NearbyServletAPI</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>jersey</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+       <param-name>com.sun.jersey.config.feature.DisableWADL</param-name>
+       <param-value>true</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jersey</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+  
+<filter>
+		<filter-name>ObjectifyFilter</filter-name>
+		<filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>ObjectifyFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+ <security-constraint>
+  		<web-resource-collection>
+    		<url-pattern>/analyzestreamtrendsservlet</url-pattern>
+  		</web-resource-collection>
+  		<auth-constraint>
+   			 <role-name>admin</role-name>
+  		</auth-constraint>
+	</security-constraint>
+</web-app>
